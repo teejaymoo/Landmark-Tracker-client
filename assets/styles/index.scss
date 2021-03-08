@@ -1,1 +1,47 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+#auth-container {
+  display: flex;
+  display: none;
+  justify-content: center;
+  padding: 10% 10% 200px 10%;
+  border: 1px solid;
+}
+
+#signUp-form { border: 1px solid; margin: 1px 1px 5px 1px;}
+#login-form { border: 1px solid; margin: 1px 1px 5px 1px;}
+
+#header {
+  display: flex;
+  position: relative;
+  border: 1px solid;
+  height: 100px;
+  justify-content: flex-end;
+}
+
+#email-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: right;
+  border: 1px solid;
+  max-width: 50%;
+}
+
+#create-content {
+  border: 1px solid;
+  height: 200px;
+}
+
+#creation-content {
+  border: 1px solid;
+  height: 100%;
+  width: 100%;
+}
+
+#input-content {
+  display: flex;
+  flex-direction: row;
+}
