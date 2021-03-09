@@ -1,15 +1,58 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+ background-color: #c5d5cb;
+}
 
 #auth-container {
+  position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  align-items: flex-start;
   padding: 10% 10% 200px 10%;
-  border: 1px solid;
 }
 
 #signUp-form { border: 1px solid; margin: 1px 1px 5px 1px;}
 #login-form { border: 1px solid; margin: 1px 1px 5px 1px;}
+.tab { position: absolute; }
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #9fa8a3;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #e3e0cf;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #e3e0cf;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #e3e0cf;
+  border-top: none;
+}
 
 #header {
   display: flex;
@@ -19,9 +62,9 @@
   justify-content: flex-end;
 }
 
-// #header {
-//   display: none;
-// }
+#header {
+  display: none;
+}
 
 #email-container {
   position: absolute;
@@ -49,11 +92,53 @@
   display: flex;
   flex-direction: row;
 }
-//
-// #create-content {
-//   display: none;
-// }
-//
-// #creation-content {
-//   display: none;
-// }
+
+#landmark-display {
+  display: inline-flex;
+}
+
+#create-content {
+  display: none;
+}
+
+#creation-content {
+  display: none;
+  position: relative;
+}
+
+#sign-out {
+  display: none;
+}
+
+#viewLandmarks-button {
+  display: none;
+  position: absolute;
+}
+
+#dynamic-delete {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.landmark-delete-dynamic {
+  position: absolute;
+  max-width: 60px;
+  max-height: 50px;
+}
+
+#message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.success {
+  color: #e3e0cf;
+  font-size: 30px;
+}
+
+.failure {
+  color: red;
+  font-size: 30px;
+}

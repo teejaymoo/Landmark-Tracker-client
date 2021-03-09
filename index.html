@@ -13,41 +13,49 @@
     </head>
     <body>
       <div class="container" id='auth-container'>
-        <section id="login-content">
-          <form action="" id="login">
-            <h1 id="login-form">Login Form</h1>
-            <div>
-              <input type="email" placeholder="Email" name="credentials[email]" required="" id="login-username" />
-            </div>
-            <div>
-              <input type="password" id="login-password" name="credentials[password]" placeholder="Enter the password">
-              <i class="far fa-eye" id="togglePassword"></i>
-            </div>
-            <div>
-              <input type="submit" value="Login" />
-            </div>
-          </form><!-- form -->
-        </section><!-- login-content -->
-        <section id="signUp-content">
-          <form action="" id="sign-up">
-            <h1 id="signUp-form">Sign-up Form</h1>
-            <div>
-              <input type="email" placeholder="Email" name="credentials[email]"required="" id="signUp-username" />
-            </div>
-            <div>
-              <input type="password" id="signUp-password" name="credentials[password]" placeholder="Enter the password">
-              <i class="far fa-eye" id="togglePassword"></i>
-            </div>
-            <div>
-              <input type="password" id="confirm-signUp-password" name="credentials[password_confirmation]" placeholder="Confirm the password">
-              <i class="far fa-eye" id="togglePassword"></i>
-            </div>
-            <div>
-              <input type="submit" value="Sign Up" />
-            </div>
-          </form><!-- form -->
-        </section>
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'login')">Login</button>
+          <button class="tablinks" onclick="openCity(event, 'signUp')">Sign-Up</button>
+          <div id="login" class="tabcontent">
+            <section id="login-content">
+              <form action="" id="login-form">
+                  <input type="email" placeholder="Email" name="credentials[email]" required="" id="login-username" />
+                <div>
+                  <input type="password" id="login-password" name="credentials[password]" placeholder="Enter the password">
+                </div>
+                <div>
+                  <input type="submit" value="Login" />
+                </div>
+              </form><!-- form -->
+            </section><!-- login-content -->
+
+          </div>
+
+          <div id="signUp" class="tabcontent">
+            <section id="signUp-content">
+              <form action="" id="sign-up">
+
+                <div>
+                  <input type="email" placeholder="Email" name="credentials[email]"required="" id="signUp-username" />
+                </div>
+                <div>
+                  <input type="password" id="signUp-password" name="credentials[password]" placeholder="Enter the password">
+                </div>
+                <div>
+                  <input type="password" id="confirm-signUp-password" name="credentials[password_confirmation]" placeholder="Confirm the password">
+                </div>
+                <div>
+                  <input type="submit" value="Sign Up" />
+                </div>
+              </form><!-- form -->
+            </section> <!--sign-up section-->
+          </div>
+        </div>
+
+
+
       </div><!-- container -->
+      <div id="message"></div>
       <div class="col-12"id="header">
         <div class="container" id="email-container">email</div>
       </div>
@@ -73,10 +81,30 @@
             <input type="submit" value="CREATE" />
           </form>
         </div>
-        <div class="col-12-md" id="creation-content">Contents</div>
-          <button id="viewLandmarks-button">View All Your Landmarks</button>
-          <div id="landmark-display"></div>
+        <div class="col-12-md" id="creation-content">
+          <div>
+            <button id="viewLandmarks-button">View All Your Landmarks</button>
+          </div>
+            <div id="landmark-display"></div>
+        </div>
     <script>
+    function openCity(e, tabName) {
+    let i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "flex";
+    e.currentTarget.className += " active";
+    }
+
+
+
     </script>
     </body>
 </html>

@@ -36,20 +36,19 @@ const showLandmark = function (data) {
   })
 }
 
-const deleteLandmark = function (data) {
-  console.log('data is ', data)
+const deleteLandmark = function (id) {
   return $.ajax({
-    url: config.apiUrl + '/lanadmarks/' + store.landmark._id,
+    url: config.apiUrl + '/landmarks/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token // IMPORTANT
     }
   })
 }
-const updateLandmark = function (data) {
+const updateLandmark = function (id, data) {
   console.log('data is ', data)
   return $.ajax({
-    url: config.apiUrl + '/landmarks/' + store.landmark._id,
+    url: config.apiUrl + '/landmarks/' + id,
     method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token // IMPORTANT

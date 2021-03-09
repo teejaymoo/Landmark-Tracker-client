@@ -23,6 +23,27 @@ const viewAllLandmarks = function (event) {
     .catch(landmarkUi.viewAllLandmarksFail)
 }
 
+const dynamicallyDeleteLandmark = function (event) {
+  event.preventDefault()
+  const deleteButton = event.target
+  const id = $(deleteButton).data('id')
+  // make our update request. Make sure to pass the id and the formData needed to update
+  landmarkApi.deleteLandmark(id)
+    .then(landmarkUi.deleteLandmarkSuccess)
+    .catch(landmarkUi.deleteLandmarkFail)
+}
+
+const dynamicallyUpdateLandmark = function (event) {
+  event.preventDefault()
+  const updateButton = event.target
+  const id = $('.landmark-update-dynamic').data('id')
+  const formData = getFormFields(updateButton)
+  // make our update request. Make sure to pass the id and the formData needed to update
+  landmarkApi.updateLandmark(id, formData)
+    .then(landmarkUi.updateLandmarkSuccess)
+    .catch(landmarkUi.updateLandmarkFail)
+}
+
 const addHandlers = () => {
   $('#input-content').on('submit', createLandmark)
   $('#viewLandmarks-button').on('click', viewAllLandmarks)

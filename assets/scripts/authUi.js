@@ -1,23 +1,35 @@
 'use strict'
-
+const errorMessage = 'Something went wrong, Please try again'
 const store = require('./store')
 
 const signUpSuccess = function (data) {
-  $('#message').text('Signed up successfully')
+  $(document).ready(function () {
+    $('#message').text('Signed up successfully').fadeIn('fast', function () {
+      $('#message').delay(2000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('signUpSuccess ran. Data is :', data)
 }
 
 const signUpFailure = function (error) {
-  $('#message').text('Error on sign up')
+  $(document).ready(function () {
+    $('#message').text(errorMessage).fadeIn('fast', function () {
+      $('#message').delay(2000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('failure')
   console.error('signUpFailure ran. Error is :', error)
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('Signed in successfully')
+  $(document).ready(function () {
+    $('#message').text('Signed in successfully').fadeIn('fast', function () {
+      $('#message').delay(2000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('signInSuccess ran. Data is :', data)
@@ -26,41 +38,58 @@ const signInSuccess = function (data) {
   $('#header').show()
   $('#create-content').show()
   $('#creation-content').show()
+  $('#sign-out').show()
+  $('#viewLandmarks-button').show()
 }
 
 const signInFailure = function (error) {
-  $('#message').text('Error on sign in')
+  $(document).ready(function () {
+    $('#message').text(errorMessage).fadeIn('slow', function () {
+      $('#message').delay(2000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('failure')
   console.error('signInFailure ran. Error is :', error)
 }
 
 const signOutSuccess = function () {
-  $('#message').text('Signed out successfully')
+  $(document).ready(function () {
+    $('#message').text('Successfully signed out!').fadeIn('slow', function () {
+      $('#message').delay(2000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('success')
-  $('form').trigger('reset')
   console.log('signOutSuccess ran and nothing was returned!')
+  $('').trigger('reset')
   store.user = null
-  $('html').trigger('reset')
 }
 
 const signOutFailure = function (error) {
-  $('#message').text('Error on sign out')
+  $('#message').text(errorMessage)
   $('#message').removeClass()
   $('#message').addClass('failure')
   console.error('signOutFailure ran. Error is :', error)
 }
 
 const changePasswordSuccess = function () {
-  $('#message').text('Changed password successfully')
+  $(document).ready(function () {
+    $('#message').text('Password is updated.').fadeIn('slow', function () {
+      $('#message').delay(2000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('changePasswordSuccess ran and nothing was returned!')
 }
 
 const changePasswordFailure = function (error) {
-  $('#message').text('Error on change password')
+  $(document).ready(function () {
+    $('#message').text(errorMessage).fadeIn('slow', function () {
+      $('#message').delay(2000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('failure')
   console.error('changePasswordFailure ran. Error is :', error)
