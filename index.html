@@ -17,10 +17,11 @@
           <form action="" id="login">
             <h1 id="login-form">Login Form</h1>
             <div>
-              <input type="text" placeholder="Username" required="" id="login-username" />
+              <input type="email" placeholder="Email" name="credentials[email]" required="" id="login-username" />
             </div>
             <div>
-              <input type="password" placeholder="Password" required="" id="login-password" />
+              <input type="password" id="login-password" name="credentials[password]" placeholder="Enter the password">
+              <i class="far fa-eye" id="togglePassword"></i>
             </div>
             <div>
               <input type="submit" value="Login" />
@@ -31,13 +32,15 @@
           <form action="" id="sign-up">
             <h1 id="signUp-form">Sign-up Form</h1>
             <div>
-              <input type="text" placeholder="Username" required="" id="signUp-username" />
+              <input type="email" placeholder="Email" name="credentials[email]"required="" id="signUp-username" />
             </div>
             <div>
-              <input type="password" placeholder="Password" required="" id="signUp-password" />
+              <input type="password" id="signUp-password" name="credentials[password]" placeholder="Enter the password">
+              <i class="far fa-eye" id="togglePassword"></i>
             </div>
             <div>
-              <input type="password" placeholder="Confirm Password" required="" id="confirm-signUp-password" />
+              <input type="password" id="confirm-signUp-password" name="credentials[password_confirmation]" placeholder="Confirm the password">
+              <i class="far fa-eye" id="togglePassword"></i>
             </div>
             <div>
               <input type="submit" value="Sign Up" />
@@ -46,25 +49,34 @@
         </section>
       </div><!-- container -->
       <div class="col-12"id="header">
-        <div class="container" id="email-container">User's email</div>
-      </div><hr>
+        <div class="container" id="email-container">email</div>
+      </div>
+      <form action="" id="sign-out">
+        <div>
+          <input type="submit" value="Sign Out" />
+        </div>
+      </form>
         <div id="create-content">Create
           <form id="input-content">
             <div>
-              <input type="text" id="landmark-name" name="landmark-name" placeholder="Landmark's Name"><br>
+              <input type="text" id="landmark-name" name="landmark[name]" placeholder="Landmark's Name" required><br>
             </div>
             <div>
-              <input type="text" id="landmark-city" name="landmark-city" placeholder="Landmark's City">
+              <input type="text" id="landmark-city" name="landmark[city]" placeholder="Landmark's City" required>
             </div>
             <div>
-              <input type="text" id="landmark-country" name="landmark-country" placeholder="Landmark's Country">
+              <input type="text" id="landmark-country" name="landmark[country]" placeholder="Landmark's Country" required>
             </div>
             <div>
-              <input type="text" id="landmark-comment" name="landmark-comment" placeholder="Landmark's Comment">
+              <input type="text" id="landmark-comment" name="landmark[comment]" placeholder="Landmark's Comment" required>
             </div>
-            <button id="create-button">CREATE</button>
+            <input type="submit" value="CREATE" />
           </form>
         </div>
         <div class="col-12-md" id="creation-content">Contents</div>
+          <button id="viewLandmarks-button">View All Your Landmarks</button>
+          <div id="landmark-display"></div>
+    <script>
+    </script>
     </body>
 </html>
