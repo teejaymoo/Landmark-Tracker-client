@@ -32,7 +32,7 @@ const viewAllLandmarksSuccess = function (response) {
   let landmarksHtml = ''
   landmarks.forEach(landmark => {
     landmarksHtml += `
-    <div>
+    <div id="landmark-data">
       <h4>Name: ${landmark.name}</h4>
       <p>City: ${landmark.city}</p>
       <p>Country: ${landmark.country}</p>

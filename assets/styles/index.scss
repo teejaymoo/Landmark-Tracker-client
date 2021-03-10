@@ -184,6 +184,16 @@ body {
   align-items: center;
 }
 
+#landmark-display {
+  position: absolute;
+}
+
+#landmark-data {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
 .success {
   color: #013220;
   font-size: 20px;
