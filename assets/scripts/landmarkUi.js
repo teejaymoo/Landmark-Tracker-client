@@ -1,24 +1,33 @@
 'use strict'
 
-const store = require('./store')
-
-const createLandmarkSuccess = function (data) {
-  $('#message').text('Created landmark successfully')
+const createLandmarkSuccess = function () {
+  $(document).ready(function () {
+    $('#message').text('Created landmark successfully, Please click "View All Your Landmarks" to see your landmarks').fadeIn('fast', function () {
+      $('#message').delay(5000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('success')
-  console.log('createLandmarkSuccess ran. Data is :', data)
   $('form').trigger('reset')
 }
 
-const createLandmarkFail = function (error) {
-  $('#message').text('Error on sign up')
+const createLandmarkFail = function () {
+  $(document).ready(function () {
+    $('#message').text('Unable to create a landmark, Please try again.').fadeIn('fast', function () {
+      $('#message').delay(5000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('failure')
-  console.error('createLandmarkFail ran. Error is :', error)
   $('form').trigger('reset')
 }
 
 const viewAllLandmarksSuccess = function (response) {
+  $(document).ready(function () {
+    $('#message').text("Here's all of the landmarks you have marked.").fadeIn('fast', function () {
+      $('#message').delay(5000).fadeOut()
+    })
+  })
   const landmarks = response.landmarks
   let landmarksHtml = ''
   landmarks.forEach(landmark => {
@@ -46,45 +55,64 @@ const viewAllLandmarksSuccess = function (response) {
   })
   $('#landmark-display').html(landmarksHtml)
   $('form').trigger('reset')
+  $('#message').removeClass()
+  $('#message').addClass('success')
 }
 
-const viewAllLandmarksFail = function (error) {
-  $('#message').text('Error on sign up')
+const viewAllLandmarksFail = function () {
+  $(document).ready(function () {
+    $('#message').text('Unable to view landmarks, Please try again.').fadeIn('fast', function () {
+      $('#message').delay(5000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('failure')
-  console.error('viewAllLandmarksFail ran. Error is :', error)
   $('form').trigger('reset')
 }
 
 const deleteLandmarkSuccess = function () {
-  $('#message').text('Landmark removed')
+  $(document).ready(function () {
+    $('#message').text('Landmark removed, Please click "View All Your Landmarks" to view your new list').fadeIn('fast', function () {
+      $('#message').delay(5000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('success')
   $('form').trigger('reset')
   $('#landmark-display').trigger('reset')
 }
 
-const deleteLandmarkFail = function (error) {
-  $('#message').text('Error on sign up')
+const deleteLandmarkFail = function () {
+  $(document).ready(function () {
+    $('#message').text('Unable to remove. Please try again').fadeIn('fast', function () {
+      $('#message').delay(5000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('failure')
-  console.error('deleteLandmarkFail ran. Error is :', error)
   $('form').trigger('reset')
 }
 
 const updateLandmarkSuccess = function () {
-  $('#message').text('Error on sign up')
+  $(document).ready(function () {
+    $('#message').text('Successfully Updated a landmark!').fadeIn('fast', function () {
+      $('#message').delay(5000).fadeOut()
+    })
+  })
   $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#message').addClass('success')
   $('form').trigger('reset')
   $('html').trigger('reset')
 }
 
-const updateLandmarkFail = function (error) {
-  $('#message').text('Error on sign up')
+const updateLandmarkFail = function () {
+  $(document).ready(function () {
+    $('#message').text('Unable to update landmark. Please try again').fadeIn('fast', function () {
+      $('#message').delay(5000).fadeOut()
+    })
+  })
   $('#message').removeClass()
   $('#message').addClass('failure')
-  console.error('updateLandmarkFail ran. Error is :', error)
   $('form').trigger('reset')
 }
 

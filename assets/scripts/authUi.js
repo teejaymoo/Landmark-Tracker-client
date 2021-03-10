@@ -55,19 +55,23 @@ const signInFailure = function () {
 
 const signOutSuccess = function () {
   $(document).ready(function () {
-    $('#another-message').text('Successfully signed out!').fadeIn('slow', function () {
-      $('#another-message').delay(2000).fadeOut()
+    $('#message').text('Successfully signed out!').fadeIn('slow', function () {
+      $('#message').delay(4000).fadeOut()
     })
   })
-  $('#another-message').removeClass()
-  $('#another-message').addClass('success')
+  $('#message').removeClass()
+  $('#message').addClass('success')
   $('html').trigger('reset')
   store.user = null
   location.reload()
 }
 
 const signOutFailure = function () {
-  $('#another-message').text(errorMessage)
+  $(document).ready(function () {
+    $('#another-message').text('Successfully signed out!').fadeIn('slow', function () {
+      $('#another-message').delay(4000).fadeOut()
+    })
+  })
   $('#another-message').removeClass()
   $('#another-message').addClass('failure')
   $('form').trigger('reset')
