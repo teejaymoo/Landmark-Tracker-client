@@ -95,7 +95,7 @@ const deleteLandmarkFail = function () {
 
 const updateLandmarkSuccess = function () {
   $(document).ready(function () {
-    $('#message').text('Successfully Updated a landmark!').fadeIn('fast', function () {
+    $('#message').text('Successfully Updated a landmark! Please click "View All Your Landmarks" to see your update.').fadeIn('fast', function () {
       $('#message').delay(5000).fadeOut()
     })
   })
