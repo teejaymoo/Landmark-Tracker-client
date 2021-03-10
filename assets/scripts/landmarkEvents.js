@@ -49,9 +49,6 @@ const addHandlers = () => {
   $('#viewLandmarks-button').on('click', viewAllLandmarks)
   $('#landmark-display').on('click', '.landmark-delete-dynamic', dynamicallyDeleteLandmark)
   $('#landmark-display').on('submit', '.landmark-update-dynamic', dynamicallyUpdateLandmark)
-  // $('#login').on('submit', onLogIn)
-  // $('#sign-out').on('submit', onSignOut)
-  // $('#change-password').on('submit', onChangePassword)
 }
 
 module.exports = {
