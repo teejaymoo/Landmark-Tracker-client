@@ -23,7 +23,7 @@ I would also eventually implement the ability to scout other users logs and comm
 
 ## Web engine
 
-Implementing jQuery/AJAX CRUD.
+Implementing Javascript, jQuery/AJAX CRUD.
 
 ## Wireframe
 
