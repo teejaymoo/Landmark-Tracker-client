@@ -51,7 +51,7 @@ module.exports = {
       'git commit -m "deploy task"',
       'git push origin gh-pages --force',
       'git clean -x -d --force --exclude=node_modules',
-      'git checkout master'
+      'git checkout main'
     ].join(' && ')
   }
 }
