@@ -5,13 +5,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="https://acegif.com/wp-content/gifs/globe-44-gap.jpg">
+      <link rel="shortcut icon" type="image/x-icon" href="Landmarker.png">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <div class="container" id="landmarker-logo">
+        <img alt src="Landmarker.png">
+      </div>
       <div class="container" id='auth-container'>
         <div class="tab">
           <button class="tablinks" onclick="openCity(event, 'login')">Login</button>
@@ -34,7 +37,6 @@
           <div id="signUp" class="tabcontent">
             <section id="signUp-content">
               <form action="" id="sign-up">
-
                 <div>
                   <input type="email" placeholder="Email" name="credentials[email]"required="" id="signUp-username" />
                 </div>
@@ -54,17 +56,47 @@
 
 
 
+
       </div><!-- container -->
-      <div id="message"></div>
-      <div class="col-12"id="header">
-        <div class="container" id="email-container">email</div>
+      <div class="container" id="message-container">
+        <div id="message"></div>
       </div>
-      <form action="" id="sign-out">
-        <div>
-          <input type="submit" value="Sign Out" />
-        </div>
-      </form>
-        <div id="create-content">Create
+      <div id="buttons">
+          <button id="account-modal" type="button" data-toggle="modal" data-target="#accountModal">
+            Account
+          </button>
+          <button id="viewLandmarks-button">View All Your Landmarks
+          </button>
+      </div>
+
+          <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="accountModalLabel">User's Account</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <form id="change-password">
+                  <input class="col" id="current-pw" autocomplete="on" spellcheck="true" name="passwords[old]" type="password" placeholder="Enter Current Password" required>
+                  <input class="col" id="new-pw" autocomplete="on" spellcheck="true" name="passwords[new]" type="password" placeholder="Enter New Password" required>
+                  <button id="save-changes">Save Changes</button>
+                </form>
+                <form action="" id="sign-out">
+                  <div>
+                      <input type="submit" value="Sign Out" />
+                  </div>
+                </form>
+                <div class="container" id="another-message"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+        <div id="create-content">
           <form id="input-content">
             <div>
               <input type="text" id="landmark-name" name="landmark[name]" placeholder="Landmark's Name" required><br>
@@ -82,9 +114,6 @@
           </form>
         </div>
         <div class="col-12-md" id="creation-content">
-          <div>
-            <button id="viewLandmarks-button">View All Your Landmarks</button>
-          </div>
             <div id="landmark-display"></div>
         </div>
     <script>
@@ -102,9 +131,6 @@
     document.getElementById(tabName).style.display = "flex";
     e.currentTarget.className += " active";
     }
-
-
-
     </script>
     </body>
 </html>
