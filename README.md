@@ -15,6 +15,8 @@ Various technologies will be used this web application; Javascript, jQuery, Boot
 https://github.com/teejaymoo/wunderlust-API
 
 This API will communicate with my database which stores all users and landmarks.
+wunderlust-API itself will use express.js to CRUD all of the landmarks and the users
+into the database. 
 
 
 ## Design details:
