@@ -25,6 +25,17 @@ I would also eventually implement the ability to scout other users logs and comm
 
 Implementing Javascript, jQuery/AJAX CRUD.
 
+## User Stories
+-As a user, I want be able to sign-up.
+-As a user, I want log in.
+-As a user, I want have the ability to change my password.
+-As a user, I want be able to sign-out
+-As a user, I want be able to create a record of places.
+-As a user, I want click on my profile and see all of the logs I've made
+-As a user, I want to be able to update any of the logs I've made.
+-As a user, I want to be able to delete any of the logs I've made.
+
+
 ## Wireframe
 
 ![fullStack1](https://media.git.generalassemb.ly/user/33542/files/bf015500-7cc1-11eb-94e2-e809a53be7db)
@@ -33,11 +44,5 @@ Implementing Javascript, jQuery/AJAX CRUD.
 ![fullStack3](https://media.git.generalassemb.ly/user/33542/files/d6404280-7cc1-11eb-8584-74d87b2236c0)
 
 
-## V.2 out of scope but here for me to reference
-
-![fullStack2](https://media.git.generalassemb.ly/user/33542/files/d3455200-7cc1-11eb-94d9-86afbceab241)
-
-## ERD
-![fullStack4](https://media.git.generalassemb.ly/user/33542/files/d9d3c980-7cc1-11eb-9584-a8f25c69ea53)
 
 # Landmarkers
