@@ -10,6 +10,13 @@ This web App's main goal is to have a record of all the landmarks (disney's worl
 
 Various technologies will be used this web application; Javascript, jQuery, Bootstrap, HTML/CSS(SASS), along with a built API by yours truly! (wunderlust-API). The API was built with Express.js Node.js and deployed on heroku.
 
+### API
+
+https://github.com/teejaymoo/wunderlust-API
+
+This API will communicate with my database which stores all users and landmarks.
+
+
 ## Design details:
 This will be a SPA (single page application), it will contain a sign-up/login fornt page along with the main page that will display all logs made. The main page will also have a section to create a new log. Each log will have a feature of updating and deleting the logs.
 
