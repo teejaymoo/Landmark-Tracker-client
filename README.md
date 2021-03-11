@@ -10,13 +10,17 @@ This web App's main goal is to have a record of all the landmarks (disney's worl
 
 Various technologies will be used this web application; Javascript, jQuery, Bootstrap, HTML/CSS(SASS), along with a built API by yours truly! (wunderlust-API). The API was built with Express.js Node.js and deployed on heroku.
 
-### API
+### API Repo and Deployment
 
+API Repo
 https://github.com/teejaymoo/wunderlust-API
+
+API deployment
+https://wunderlust-api-626.herokuapp.com/
 
 This API will communicate with my database which stores all users and landmarks.
 wunderlust-API itself will use express.js to CRUD all of the landmarks and the users
-into the database. 
+into the database.
 
 
 ## Design details:
