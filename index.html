@@ -12,6 +12,9 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <button id="account-modal" type="button" data-toggle="modal" data-target="#accountModal">
+        Account
+      </button>
       <div class="container" id="landmarker-logo">
         <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/248/4824631248_131f592f-2b5f-433d-b770-ecb87f9e91e8.png?cb=1615334288" alt>
       </div>
@@ -61,13 +64,12 @@
       <div class="container" id="message-container">
         <div id="message"></div>
       </div>
-      <div id="buttons">
-          <button id="account-modal" type="button" data-toggle="modal" data-target="#accountModal">
-            Account
+          <!-- Button trigger modal -->
+          <button type="button" id="create-modal-button" data-toggle="modal" data-target="#create-modal-long">
+            Create a Landmark
           </button>
           <button id="viewLandmarks-button">View All Your Landmarks
           </button>
-      </div>
 
           <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -96,23 +98,50 @@
               </div>
             </div>
           </div>
-        <div id="create-content">
-          <form id="input-content">
-            <div>
-              <input type="text" id="landmark-name" name="landmark[name]" placeholder="Landmark's Name" required><br>
+
+          <!-- Modal -->
+          <div class="modal fade" id="create-modal-long" tabindex="-1" role="dialog" aria-labelledby="create-modal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content" id="create-modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="create-modal">Create a Landmark</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="create-modal-body">
+                  <div id="create-content">
+                    <form id="input-content">
+                      <div id="landmark-name">
+                        <h4>Landmark Name</h4>
+                        <input type="text" name="landmark[name]" placeholder="Landmark's Name" required><br>
+                      </div>
+
+                      <div id="landmark-city" >
+                        <h4>Landmark City</h4>
+                        <input type="text" name="landmark[city]" placeholder="Landmark's City" required>
+                      </div>
+
+                      <div id="landmark-country">
+                        <h4>Landmark Country</h4>
+                        <input type="text" name="landmark[country]" placeholder="Landmark's Country" required>
+                      </div>
+
+                      <div id="landmark-comment">
+                        <h4>Landmark Comment</h4>
+                        <input type="text"  name="landmark[comment]" placeholder="Landmark's Comment" required>
+                      </div>
+                      <input type="submit" value="CREATE" />
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <div id="creation-message"></div>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
             </div>
-            <div>
-              <input type="text" id="landmark-city" name="landmark[city]" placeholder="Landmark's City" required>
-            </div>
-            <div>
-              <input type="text" id="landmark-country" name="landmark[country]" placeholder="Landmark's Country" required>
-            </div>
-            <div>
-              <input type="text" id="landmark-comment" name="landmark[comment]" placeholder="Landmark's Comment" required>
-            </div>
-            <input type="submit" value="CREATE" />
-          </form>
-        </div>
+          </div>
         <div class="col-12-md" id="creation-content">
             <div id="landmark-display"></div>
         </div>

@@ -7,7 +7,6 @@ const authUi = require('./authUi')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('sign up ran!')
 
   const data = getFormFields(event.target)
   authApi.signUp(data)
@@ -17,7 +16,6 @@ const onSignUp = function (event) {
 
 const onLogIn = function (event) {
   event.preventDefault()
-  console.log('sign in ran!')
 
   const data = getFormFields(event.target)
   authApi.logIn(data)
@@ -27,7 +25,6 @@ const onLogIn = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('sign out ran')
 
   authApi.signOut()
     .then(authUi.signOutSuccess)
@@ -36,7 +33,6 @@ const onSignOut = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('change password ran!')
 
   const data = getFormFields(event.target)
   authApi.changePassword(data)

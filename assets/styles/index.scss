@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+// importing our variables file to make it accessible
+@import 'variables';
 
 body {
  background-color: #c5d5cb;
@@ -22,6 +24,7 @@ body {
 }
 
 #landmarker-logo {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -29,26 +32,6 @@ body {
 
 #login-form { margin: 1px 1px 5px 1px;}
 .tab { position: absolute; }
-
-
-.field-icon {
-  float: center;
-  margin-left: -25px;
-  margin-top: -25px;
-  position: relative;
-  z-index: 2;
-}
-.button {
-  position: absolute;
-  background-color: inherit;
-  border:none;
-  outline:none;
-  padding:2px;
-  margin-left: auto;
-  margin-right: auto;
-  right: 0px;
-  top: calc(50% - 0.7em); /* Keep icon in center of input, regardless of the input height */
-}
 
 
 .tab {
@@ -97,13 +80,14 @@ body {
 #header {
   display: none;
 }
-#buttons {
 
-}
 #account-modal {
   display: none;
+  float: right;
 }
-
+button:hover {
+  background-color: #c5d5cb;
+}
 #another-message {
   height: 100px;
 }
@@ -120,32 +104,27 @@ body {
   height: 57px;
 }
 
-#create-content {
-  display: block;
-  float: right;
-  height: 200px;
-}
-
-#creation-content {
-
-  height: 100%;
-  width: 100%;
+#create-modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 
 #input-content {
+  position: absolute;
   display: contents;
+}
+
+
+#creation-content {
+  height: 100%;
+  width: 100%;
 }
 
 #landmark-display {
   display: block;
 
 }
-
-#create-content {
-  display: none;
-  padding: 10px;
-}
-
 
 #sign-out {
   display: none;
@@ -156,6 +135,9 @@ body {
   position: absolute;
 }
 
+#create-modal-button {
+  display: none;
+}
 
 #dynamic-delete {
   display: flex;
@@ -188,11 +170,6 @@ body {
   position: absolute;
 }
 
-#landmark-data {
-  align-items: center;
-  flex-direction: column;
-  display: flex;
-}
 
 .success {
   color: #013220;

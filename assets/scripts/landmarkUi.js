@@ -2,23 +2,19 @@
 
 const createLandmarkSuccess = function () {
   $(document).ready(function () {
-    $('#message').text('Created landmark successfully, Please click "View All Your Landmarks" to see your landmarks').fadeIn('fast', function () {
-      $('#message').delay(5000).fadeOut()
+    $('#creation-message').text("Landmark Created! Please close and then click 'View All Your Landmarks' to see your list").fadeIn('fast', function () {
+      $('#creation-message').delay(10000).fadeOut()
     })
   })
-  $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#creation-message').removeClass()
+  $('#creation-message').addClass('success')
   $('form').trigger('reset')
 }
 
 const createLandmarkFail = function () {
-  $(document).ready(function () {
-    $('#message').text('Unable to create a landmark, Please try again.').fadeIn('fast', function () {
-      $('#message').delay(5000).fadeOut()
-    })
-  })
-  $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#creation-message').text('Unable to create a landmark, Please try again.')
+  $('#creation-message').removeClass()
+  $('#creation-message').addClass('failure')
   $('form').trigger('reset')
 }
 
@@ -28,11 +24,11 @@ const viewAllLandmarksSuccess = function (response) {
       $('#message').delay(5000).fadeOut()
     })
   })
+  $('#landmark-display').show()
   const landmarks = response.landmarks
   let landmarksHtml = ''
   landmarks.forEach(landmark => {
     landmarksHtml += `
-    <div id="landmark-data">
       <h4>Name: ${landmark.name}</h4>
       <p>City: ${landmark.city}</p>
       <p>Country: ${landmark.country}</p>
@@ -41,16 +37,15 @@ const viewAllLandmarksSuccess = function (response) {
       Remove Landmark
       </button>
       <form class="landmark-update-dynamic" data-id=${landmark._id}>
-        <input id="remove-a" autocomplete="on" spellcheck="true" type="text" name="landmark[name]" placeholder="Update The Name Here" required>
-        <input id="remove-b" autocomplete="on" spellcheck="true" type="text" name="landmark[city]" placeholder="Update The City Here" required>
-        <input id="remove-c" autocomplete="on" spellcheck="true" type="text" name="landmark[country]" placeholder="Update The Country Here" required>
-        <input id="remove-d" autocomplete="on" spellcheck="true" type="text" name="landmark[comment]" placeholder="Update The Comment Here" required>
+        <input autocomplete="on" spellcheck="true" type="text" name="landmark[name]" placeholder="Update The Name Here" required>
+        <input autocomplete="on" spellcheck="true" type="text" name="landmark[city]" placeholder="Update The City Here" required>
+        <input autocomplete="on" spellcheck="true" type="text" name="landmark[country]" placeholder="Update The Country Here" required>
+        <input autocomplete="on" spellcheck="true" type="text" name="landmark[comment]" placeholder="Update The Comment Here" required>
         <button>
         Update Landmark
         </button>
       </form>
       <hr>
-      </div>
     `
   })
   $('#landmark-display').html(landmarksHtml)
@@ -72,14 +67,12 @@ const viewAllLandmarksFail = function () {
 
 const deleteLandmarkSuccess = function () {
   $(document).ready(function () {
-    $('#message').text('Landmark removed, Please click "View All Your Landmarks" to view your new list').fadeIn('fast', function () {
-      $('#message').delay(5000).fadeOut()
+    $('#landmark-display').text('Landmark removed, Please click "View All Your Landmarks" to view your new list').fadeIn('fast', function () {
+      $('#landmark-display').delay(5000).fadeOut()
     })
   })
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  $('form').trigger('reset')
-  $('#landmark-display').trigger('reset')
+  $('#landmark-display').removeClass()
+  $('#landmark-display').addClass('success')
 }
 
 const deleteLandmarkFail = function () {
@@ -95,14 +88,12 @@ const deleteLandmarkFail = function () {
 
 const updateLandmarkSuccess = function () {
   $(document).ready(function () {
-    $('#message').text('Successfully Updated a landmark! Please click "View All Your Landmarks" to see your update.').fadeIn('fast', function () {
-      $('#message').delay(5000).fadeOut()
+    $('#landmark-display').text('Successfully Updated a landmark! Please click "View All Your Landmarks" to see your update.').fadeIn('fast', function () {
+      $('#landmark-display').delay(5000).fadeOut()
     })
   })
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  $('form').trigger('reset')
-  $('html').trigger('reset')
+  $('#landmark-display').removeClass()
+  $('#landmark-display').addClass('success')
 }
 
 const updateLandmarkFail = function () {

@@ -40,6 +40,7 @@ const signInSuccess = function (data) {
   $('#sign-out').show()
   $('#viewLandmarks-button').show()
   $('#account-modal').show()
+  $('#create-modal-button').show()
 }
 
 const signInFailure = function () {
@@ -62,8 +63,16 @@ const signOutSuccess = function () {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('html').trigger('reset')
+  $('form').trigger('reset')
   store.user = null
-  location.reload()
+  $('#create-content').hide()
+  $('#creation-content').hide()
+  $('#sign-out').hide()
+  $('#viewLandmarks-button').hide()
+  $('#accountModal').hide()
+  $('#account-modal').hide()
+  $('#create-modal-button').hide()
+  $('#auth-container').show()
 }
 
 const signOutFailure = function () {
