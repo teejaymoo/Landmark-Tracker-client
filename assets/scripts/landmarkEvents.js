@@ -36,7 +36,7 @@ const dynamicallyDeleteLandmark = function (event) {
 const dynamicallyUpdateLandmark = function (event) {
   event.preventDefault()
   const updateButton = event.target
-  const id = $('.landmark-update-dynamic').data('id')
+  const id = $(updateButton).data('id')
   const formData = getFormFields(updateButton)
   // make our update request. Make sure to pass the id and the formData needed to update
   landmarkApi.updateLandmark(id, formData)
