@@ -62,17 +62,8 @@ const signOutSuccess = function () {
   })
   $('#message').removeClass()
   $('#message').addClass('success')
-  $('html').trigger('reset')
   $('form').trigger('reset')
   store.user = null
-  $('#create-content').hide()
-  $('#creation-content').hide()
-  $('#sign-out').hide()
-  $('#viewLandmarks-button').hide()
-  $('#accountModal').hide()
-  $('#account-modal').hide()
-  $('#create-modal-button').hide()
-  $('#auth-container').show()
 }
 
 const signOutFailure = function () {
