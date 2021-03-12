@@ -3,12 +3,13 @@
 const createLandmarkSuccess = function () {
   $(document).ready(function () {
     $('#creation-message').text("Landmark Created! Please close and then click 'View All Your Landmarks' to see your list").fadeIn('fast', function () {
-      $('#creation-message').delay(10000).fadeOut()
+      $('#creation-message').delay(5000).fadeOut()
     })
   })
   $('#creation-message').removeClass()
   $('#creation-message').addClass('success')
   $('form').trigger('reset')
+  $('#landmark-display').hide()
 }
 
 const createLandmarkFail = function () {
@@ -67,12 +68,14 @@ const viewAllLandmarksFail = function () {
 
 const deleteLandmarkSuccess = function () {
   $(document).ready(function () {
-    $('#landmark-display').text('Landmark removed, Please click "View All Your Landmarks" to view your new list').fadeIn('fast', function () {
-      $('#landmark-display').delay(5000).fadeOut()
+    $('#message').text('Landmark removed, Please click "View All Your Landmarks" to view your new list').fadeIn('fast', function () {
+      $('#message').delay(5000).fadeOut()
     })
   })
-  $('#landmark-display').removeClass()
-  $('#landmark-display').addClass('success')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  $('form').trigger('reset')
+  $('#landmark-display').hide()
 }
 
 const deleteLandmarkFail = function () {
@@ -88,12 +91,12 @@ const deleteLandmarkFail = function () {
 
 const updateLandmarkSuccess = function () {
   $(document).ready(function () {
-    $('#landmark-display').text('Successfully Updated a landmark! Please click "View All Your Landmarks" to see your update.').fadeIn('fast', function () {
-      $('#landmark-display').delay(5000).fadeOut()
+    $('#message').text('Successfully Updated a landmark! Please click "View All Your Landmarks" to see your update.').fadeIn('fast', function () {
+      $('#message').delay(5000).fadeOut()
     })
   })
-  $('#landmark-display').removeClass()
-  $('#landmark-display').addClass('success')
+  $('form').trigger('reset')
+  $('#landmark-display').hide()
 }
 
 const updateLandmarkFail = function () {
