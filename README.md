@@ -24,7 +24,7 @@ into the database.
 
 
 ## Design details:
-This will be a SPA (single page application), it will contain a sign-up/login fornt page along with the main page that will display all logs made. The main page will also have a section to create a new log. Each log will have a feature of updating and deleting the logs.
+This will be a SPA (single page application), it will contain a sign-up/login front page along with the main page that will display all logs made. The main page will also have a section to create a new log. Each log will have a feature of updating and deleting the logs.
 
 ## Unsolved problems
 
@@ -39,14 +39,14 @@ I would also eventually implement the ability to scout other users logs and comm
 Implementing Javascript, jQuery/AJAX CRUD.
 
 ## User Stories
--As a user, I want be able to sign-up.
--As a user, I want log in.
--As a user, I want have the ability to change my password.
--As a user, I want be able to sign-out
--As a user, I want be able to create a record of places.
--As a user, I want click on my profile and see all of the logs I've made
--As a user, I want to be able to update any of the logs I've made.
--As a user, I want to be able to delete any of the logs I've made.
+* As a user, I want be able to sign-up.
+* As a user, I want log in.
+* As a user, I want have the ability to change my password.
+* As a user, I want be able to sign-out
+* As a user, I want be able to create a record of places.
+* As a user, I want click on my profile and see all of the logs I've made
+* As a user, I want to be able to update any of the logs I've made.
+* As a user, I want to be able to delete any of the logs I've made.
 
 
 ## Wireframe
