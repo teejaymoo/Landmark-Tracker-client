@@ -24,7 +24,6 @@ const onLogIn = function (event) {
 }
 
 const onSignOut = function (event) {
-  event.preventDefault()
 
   authApi.signOut()
     .then(authUi.signOutSuccess)
