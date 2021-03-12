@@ -193,6 +193,8 @@ button:hover {
 @media only screen and (max-width: 380px) {
 
   #message-container {
+    display:flex;
+    align-items: flex-end;
     height: 90px;
   }
 
