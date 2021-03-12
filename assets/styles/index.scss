@@ -156,7 +156,7 @@ button:hover {
 
 
 #message-container {
-  height: 25px;
+  height: 55px;
 }
 
 #message {
@@ -168,6 +168,13 @@ button:hover {
 
 #landmark-display {
   position: absolute;
+  margin: 50px;
+}
+
+#main-buttons {
+  float: left;
+  padding: 0;
+  display: flex;
 }
 
 
@@ -179,4 +186,42 @@ button:hover {
 .failure {
   color: red;
   font-size: 20px;
+}
+
+// 375 x 812 px - iphone x size
+// 300 x 213 - logo size
+@media only screen and (max-width: 380px) {
+
+  #message-container {
+    height: 90px;
+  }
+
+  .success {
+    color: #013220;
+    font-size: 17px;
+  }
+
+  .failure {
+    color: red;
+    font-size: 17px;
+  }
+
+  .tab {
+    display: grid;
+  }
+
+  #the-logo {
+    width: 250px;
+  }
+
+  #landmark-display {
+    margin: 50px;
+  }
+
+  #main-buttons {
+    display: block;
+  }
+  #creation-content {
+    display: flex;
+  }
 }
