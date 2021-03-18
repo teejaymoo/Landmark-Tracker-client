@@ -38,10 +38,10 @@ const viewAllLandmarksSuccess = function (response) {
       Remove Landmark
       </button>
       <form class="landmark-update-dynamic" data-id=${landmark._id}>
-        <input autocomplete="on" spellcheck="true" type="text" name="landmark[name]" placeholder="Update The Name Here" required>
-        <input autocomplete="on" spellcheck="true" type="text" name="landmark[city]" placeholder="Update The City Here" required>
-        <input autocomplete="on" spellcheck="true" type="text" name="landmark[country]" placeholder="Update The Country Here" required>
-        <input autocomplete="on" spellcheck="true" type="text" name="landmark[comment]" placeholder="Update The Comment Here" required>
+        <input autocomplete="on" value="${landmark.name}" spellcheck="true" type="text" name="landmark[name]" placeholder="Update The Name Here" required>
+        <input autocomplete="on" value="${landmark.city}" spellcheck="true" type="text" name="landmark[city]" placeholder="Update The City Here" required>
+        <input autocomplete="on" value="${landmark.country}" spellcheck="true" type="text" name="landmark[country]" placeholder="Update The Country Here" required>
+        <input autocomplete="on" value="${landmark.comment}" spellcheck="true" type="text" name="landmark[comment]" placeholder="Update The Comment Here" required>
         <button>
         Update Landmark
         </button>
