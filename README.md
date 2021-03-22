@@ -12,11 +12,9 @@ Various technologies will be used this web application; Javascript, jQuery, Boot
 
 ### API Repo and Deployment
 
-API Repo
-https://github.com/teejaymoo/wunderlust-API
+[API Repo](https://github.com/teejaymoo/wunderlust-API)
 
-API deployment
-https://wunderlust-api-626.herokuapp.com/
+[API deployment](https://wunderlust-api-626.herokuapp.com/)
 
 This API will communicate with my database which stores all users and landmarks.
 wunderlust-API itself will use express.js to CRUD all of the landmarks and the users
