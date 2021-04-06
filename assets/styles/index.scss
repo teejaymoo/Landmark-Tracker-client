@@ -123,8 +123,15 @@ button:hover {
 }
 
 #landmark-display {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
 
+}
+
+
+.card {
+  background-color: #c5d5cb;
+  max-width: 225px;
 }
 
 #sign-out {

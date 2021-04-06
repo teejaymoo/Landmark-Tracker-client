@@ -30,22 +30,26 @@ const viewAllLandmarksSuccess = function (response) {
   let landmarksHtml = ''
   landmarks.forEach(landmark => {
     landmarksHtml += `
-      <h4>Name: ${landmark.name}</h4>
-      <p>City: ${landmark.city}</p>
-      <p>Country: ${landmark.country}</p>
-      <p>Comment: ${landmark.comment}</p>
-      <button class="landmark-delete-dynamic" data-id=${landmark._id}>
-      Remove Landmark
-      </button>
-      <form class="landmark-update-dynamic" data-id=${landmark._id}>
-        <input autocomplete="on" value="${landmark.name}" spellcheck="true" type="text" name="landmark[name]" placeholder="Update The Name Here" required>
-        <input autocomplete="on" value="${landmark.city}" spellcheck="true" type="text" name="landmark[city]" placeholder="Update The City Here" required>
-        <input autocomplete="on" value="${landmark.country}" spellcheck="true" type="text" name="landmark[country]" placeholder="Update The Country Here" required>
-        <input autocomplete="on" value="${landmark.comment}" spellcheck="true" type="text" name="landmark[comment]" placeholder="Update The Comment Here" required>
-        <button>
-        Update Landmark
-        </button>
-      </form>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Name: ${landmark.name}</h4>
+          <p class="card-text">City: ${landmark.city}</p>
+          <p class="card-text">Country: ${landmark.country}</p>
+          <p class="card-text">Comment: ${landmark.comment}</p>
+          <button class="landmark-delete-dynamic" data-id=${landmark._id}>
+          Remove Landmark
+          </button>
+          <form class="landmark-update-dynamic" data-id=${landmark._id}>
+            <input autocomplete="on" value="${landmark.name}" spellcheck="true" type="text" name="landmark[name]" placeholder="Update The Name Here" required>
+            <input autocomplete="on" value="${landmark.city}" spellcheck="true" type="text" name="landmark[city]" placeholder="Update The City Here" required>
+            <input autocomplete="on" value="${landmark.country}" spellcheck="true" type="text" name="landmark[country]" placeholder="Update The Country Here" required>
+            <input autocomplete="on" value="${landmark.comment}" spellcheck="true" type="text" name="landmark[comment]" placeholder="Update The Comment Here" required>
+            <button>
+            Update Landmark
+            </button>
+          </form>
+        </div>
+      </div>
       <hr>
     `
   })
