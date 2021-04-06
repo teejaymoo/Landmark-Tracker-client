@@ -119,6 +119,7 @@ button:hover {
 #creation-content {
   height: 100%;
   width: 100%;
+  text-align: center;
 }
 
 #landmark-display {
@@ -145,12 +146,14 @@ button:hover {
   align-items: flex-end;
 }
 
-#landmark-delete-dynamic {
+.landmark-delete-dynamic {
   margin: 0px 0px 15px 0px;
 }
-#landmark-update-dynamic {
+.landmark-update-dynamic {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
   max-width: 50%;
 }
 
